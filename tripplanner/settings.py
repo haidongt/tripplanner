@@ -1,5 +1,5 @@
 # Django settings for tripplanner project.
-
+# aa
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
