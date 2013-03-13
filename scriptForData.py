@@ -8,3 +8,4 @@ while 1:
     line = line.strip()
     fields = line.split("*")
     newRow = Destination(name = fields[0], location = fields[2]+","+fields[3], description = fields[1])
+    newRow.save()
