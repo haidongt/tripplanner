@@ -4,9 +4,10 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+from tripDB import views
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'tripplanner.views.home', name='home'),
+    url(r'^$', include('tripDB.urls')),
     # url(r'^tripplanner/', include('tripplanner.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
