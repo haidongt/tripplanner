@@ -25,7 +25,7 @@ DATABASES = {
         'NAME': 'hackberry',                      # Or path to database file if using sqlite3.
         'USER': 'postgres',                      # Not used with sqlite3.
         'PASSWORD': 'hackberry',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
@@ -161,7 +161,7 @@ LOGGING = {
         },
     }
 }
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
