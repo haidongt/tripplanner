@@ -2,5 +2,5 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 
 def index(request):
-    return render_to_response('planner/index1.html')
+    return render_to_response('planner/index.html')
 # Create your views here.
