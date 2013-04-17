@@ -43,9 +43,12 @@
           <h1>Playframework <small>Are you part of the map?</small></h1>
         </div>
 
-        <div class="row">
-          <div class="span12">
-                 <div id="map-canvas" style="width:50%; height:400px"></div>
+<table width = "100%" cellpadding = "10">
+<tr>
+<td width = "50%" valign = "top">
+
+          <div class="span8">
+                 <div id="map-canvas" style="width:100%; height:400px"></div>
              <!--
              <div class="figure">
                 <p><b>Playframework: </b> Connecting with 344 people.</p>
@@ -61,11 +64,45 @@
              </div>
              -->
           </div>
+</td>
+
+<td width = "50%" valign = "top">
           <div class="span4">
               <h3>Information</h3>
               <p>The Play! Framework is a modern Java and Scala web application open-source framework that provides a clean alternative to bloated Enterprise Java stacks.</p>
           </div>
-        </div>
+
+<div style="margin:20px;border-width:2px;">
+    <form action = "">
+    <b>Start:</b>
+    <input type = "text" id="start"><br>
+    <b>End:</b>
+    <input type = "text" id="end"><br>
+    </form>
+<!--
+    <b>Waypoints:</b> <br>
+    <i>(Ctrl-Click for multiple selection)</i> <br>
+    <select multiple id="waypoints">
+      <option value="montreal, quebec">Montreal, QBC</input>
+      <option value="toronto, ont">Toronto, ONT</input>
+      <option value="chicago, il">Chicago</input>
+      <option value="winnipeg, mb">Winnipeg</input>
+      <option value="fargo, nd">Fargo</input>
+      <option value="calgary, ab">Calgary</input>
+      <option value="spokane, wa">Spokane</input>
+    </select>
+    <br>
+-->
+    <form name="form" action="post" method="">
+      Attractions: 
+      <input type="button" value="add" onClick="add();">
+    <div id="my_div"></div>
+    </form>
+    
+      <input type="submit" onclick="calcRoute();">
+</td>
+</tr>
+</table>
      </div>
      </div>
 

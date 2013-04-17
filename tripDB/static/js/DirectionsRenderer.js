@@ -2,6 +2,14 @@ var directionDisplay;
       var directionsService = new google.maps.DirectionsService();
       var map;
 
+      function add()
+      {
+          var i = 1;
+          //my_div=document.getElementById("my_div");
+	    my_div.innerHTML = my_div.innerHTML +"<br><input type='text'  name='mytext'+ i>"
+
+       }
+
       function initialize() {
         directionsDisplay = new google.maps.DirectionsRenderer();
         var chicago = new google.maps.LatLng(41.850033, -87.6500523);
@@ -15,17 +23,25 @@ var directionDisplay;
       }
 
       function calcRoute() {
+
         var start = document.getElementById('start').value;
         var end = document.getElementById('end').value;
         var waypts = [];
-        var checkboxArray = document.getElementById('waypoints');
-        //for (var i = 0; i < checkboxArray.length; i++) {
-        for (var i = checkboxArray.length-1; i >= 0; i--) {
-          if (checkboxArray.options[i].selected == true) {
-            waypts.push({
+        var attractions = document.getElementById('my_div');
+
+        for (var i = 0; i < my_div.childNodes.length; i++) {
+           if(my_div.childNodes[i].tagName == "INPUT")
+           {
+               var textValue = my_div.childNodes[i].value;
+               waypts.push({
+               location:textValue,
+               stopover:false});
+              
+           }
+           
+           /* waypts.push({
                 location:checkboxArray[i].value,
-                stopover:true});
-          }
+                stopover:true});*/
         }
 
         var request = {
