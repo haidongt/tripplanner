@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas { height: 10% }
-    </style>
-    <title>Google Maps JavaScript API v3 Example: Directions Waypoints</title>
-    
+    <head>
+        <title>DevMap - Map - Playframework</title>
+        <meta charset="utf-8">
         <link rel="stylesheet" media="screen" href="/static/css/bootstrap.min.css">
         <link rel="stylesheet" media="screen" href="/static/css/main.css">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD92Ym1qY92sMoaJWC_BiFrE8A_QAU9QMI&sensor=false"></script>
-    <script src="/static/js/DirectionsRenderer.js"></script>
+                <link rel="shortcut icon" type="image/png" href="/public/images/favicon.png">
+        <script src="/public/javascripts/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/public/javascripts/bootstrap-alert.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/public/javascripts/bootstrap-modal.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+               $(".alert-message").alert();
+            });
+        </script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD92Ym1qY92sMoaJWC_BiFrE8A_QAU9QMI&sensor=false"></script>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+<script type="text/javascript">
+    var map;
+    var icons = [
+       new google.maps.MarkerImage("/public/images/type0.png"),
+       new google.maps.MarkerImage("/public/images/type1.png"),
+       new google.maps.MarkerImage("/public/images/type2.png"),
+       new google.maps.MarkerImage("/public/images/type3.png")
+    ];
+    function initialize() {
+
+        var latlng = new google.maps.LatLng(20.0, 0.0);
+        var myOptions = {
+          zoom: 2,
+          minZoom: 2,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+                        }
+
+    function addMarker(latLng, titleTxt, icon) {
+        var marker = new google.maps.Marker({
+           position: latLng,
+           title: titleTxt,
+           icon: icon
+        });
+        marker.setMap(map);
+    }
+
+  $(document).ready(function () {
+    initialize();
+
+            if (self.document.location.search == "?join") {
+            $("#join").click();
+        }
     
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="/static/bootstrapjs/bootstrap.min.js"></script>
-   
-  </head>
-  <body onload="initialize()">
+    
+    $("#tw-share").click(function() {
+        window.open('http://twitter.com/home?status=Check Out The Playframework Map! - http://devmap.herokuapp.com/map/1/playframework' ,'twshare','width=450,height=300,left='+(screen.availWidth/2-225)+',top='+(screen.availHeight/2-150)+'');
+    });
+    $("#fb-share").click(function() {
+        window.open('https://www.facebook.com/sharer.php?u=http://devmap.herokuapp.com/map/1/playframework&t=Check Out The Playframework Map!','fbshare','width=450,height=300,left='+(screen.availWidth/2-225)+',top='+(screen.availHeight/2-150)+'');
+    });
+
+    $("#gp-share").click(function() {
+        window.open('https://plus.google.com/share?url=http://devmap.herokuapp.com/map/1/playframework','gplusshare','width=450,height=300,left='+(screen.availWidth/2-225)+',top='+(screen.availHeight/2-150)+'');
+    });
+
+  });
+</script>
 
 
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28058577-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+    
+
+    </head>
+    <body>
+    
     <div class="topbar">
       <div class="fill">
         <div class="container">
@@ -44,7 +115,11 @@
       </div>
     </div>
 
+        
     <div class="container">
+        
+
+
 
      <div class="content">
         <div class="page-header">
@@ -52,7 +127,7 @@
         </div>
         <div class="row">
           <div class="span12">
-                          <div id="map-canvas" style="width:100%; height:400px"></div>
+                          <div id="map_canvas" style="width:100%; height:400px"></div>
              <div class="figure">
                 <p><b>Playframework: </b> Connecting with 344 people.</p>
              </div>
@@ -83,7 +158,80 @@
           </div>
         </div>
      </div>
-     </div>
 
-  </body>
+
+     <div id="embedmapmodal" class="modal hide" style="display: none; ">
+        <div class="modal-header">
+          <a href="#" class="close">×</a>
+          <h3>Embed this map in your website</h3>
+        </div>
+        <div class="modal-body">
+            <p>Copy the code below into your website or blog to share this map with your users.</p>
+            <textarea style="width:98%">
+<iframe src="http://devmap.herokuapp.com/map/embed/1" width=600 height=400  />
+            </textarea>
+        </div>
+      </div>
+
+
+     <div id="joinmapmodal" class="modal hide" style="display: none; ">
+        <div class="modal-header">
+          <a href="#" class="close">×</a>
+          <h3>Add Yourself To The &quot;Playframework&quot; Map</h3>
+        </div>
+        <div class="modal-body">
+           <form id="addtomap-form" action="/application/addtomap" method="post">
+              <input type="hidden" name="id" value="1" />
+              <p><label style="text-align:left;">User Type: </label>
+
+              <select name="type">
+                  <option value="0"></option>
+                  <option value="1">Creator/Committer</option>
+                  <option value="2">Author</option>
+                  <option value="3">Blogger</option>
+                  <option value="0">User</option>
+              </select>
+              </p>
+
+              <p><label style="text-align:left;">Notes: </label><textarea style="width:380px" name="notes"></textarea></p>
+           </form>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:$('#addtomap-form').submit()" class="btn primary">Add To Map</a>
+          <a href="javascript:$('#joinmapmodal').modal('hide')" class="btn secondary">Cancel</a>
+        </div>
+      </div>      
+    </div>
+    <footer>
+
+      <div class="container">
+          <ul>
+            <li><h2>Developer Maps</h2></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/map">All Maps</a></li>
+            <li><a href="/map">Search Maps</a></li>
+            <li><a href="/map/popular">Popular Maps</a></li>
+            <li><a href="/map/new">Newest Maps</a></li>
+          </ul>
+        <ul>
+          <li><h2>About You</h2></li>
+          <li><a href="/user/me">Settings</a></li>
+          <li><a href="/user/me/maps">Your Maps</a></li>
+          <li><a href="/map/create">Create New Map</a></li>
+        </ul>
+        <ul>
+          <li><h2>About Us</h2></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+          <ul class="quote">
+              <li><img src="/public/images/map.png" width="200" /> </li>
+          </ul>
+
+        <hr>
+        <p id="copy">Copyright Wayne Ellis &copy; 2013 | Built using the <a target="_blank" href="http://www.the-play-book.co.uk">Play Framework</a></p>
+      </div>
+    </footer>
+
+    </body>
 </html>
