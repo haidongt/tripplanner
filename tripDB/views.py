@@ -7,7 +7,8 @@ from ajax_select.fields import AutoCompleteField
 
 
 def index(request):
-    return render_to_response('planner/index.html')
+    if request.method == "GET":
+        return render_to_response('planner/index.html')
 # Create your views here.
 
 

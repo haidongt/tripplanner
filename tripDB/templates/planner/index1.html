@@ -2,18 +2,8 @@
 
 <body>
 
-	{% if entered %}
-		<p>You entered: <blockquote>{{ entered }}</blockquote></p>
-	{% endif %}
-
-	<form action="{% url destination %}" method="GET">
-	<table>
-	{{ form }}
-	<tr>
-		<th></th><td><input type="submit" /></td>
-	</tr>
-	</table>
-	</form>
+{% include "planner/search_form.html" %}
+{% include "planner/search_form.html" %}
 
 </body>
 </html>
