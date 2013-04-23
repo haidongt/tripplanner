@@ -12,10 +12,10 @@ class Destination(models.Model):
         return self.name
     
 class Route(models.Model):
-    #route_ID = models.IntegerField(default=0)
-    #dest_A_ID = models.IntegerField(default=0)
-    #dest_B_ID = models.IntegerField(default=0)
-    destA = models.ForeignKey(Destination, related_name='route_from')
-    destB = models.ForeignKey(Destination, related_name='route_to')
-    driving_time = models.IntegerField(default=0)
+    destA = models.CharField(max_length=200)
+    destB = models.CharField(max_length=200)
+
+class Attraction(models.Model):
+    route = models.ForeignKey(Route)
+    name = models.CharField(max_length=200)
 

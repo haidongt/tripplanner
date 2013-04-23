@@ -23,28 +23,16 @@ var currentRoute;
         }
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
         directionsDisplay.setMap(map);
+        updateSavedRoute();
       }
 
-      function calcRoute() {
-
-        var start = document.getElementById('start').value;
-        var end = document.getElementById('end').value;
+      function calcRoute(start, end, attractions)
+ {
         var waypts = [];
-        var attractions = document.getElementById('my_div');
-
-        for (var i = 0; i < my_div.childNodes.length; i++) {
-           if(my_div.childNodes[i].tagName == "INPUT")
-           {
-               var textValue = my_div.childNodes[i].value;
+        for (var i = 0; i < attractions.length; i++) {
                waypts.push({
-               location:textValue,
+               location:attractions[i],
                stopover:true});
-              
-           }
-           
-           /* waypts.push({
-                location:checkboxArray[i].value,
-                stopover:true});*/
         }
 
         var request = {
@@ -88,12 +76,27 @@ updateSavedRoute();
           "/saveroute/" + route,
           function (data) {
 $.each(data, function(key, val) {
-
   });
           }
           ); 
       }
 
+      function showSavedRoute(id)
+      {
+          $.getJSON("/getrouteforid/"+id, function(data) {
+ $.each(data, function(key, val) {
+
+var start = val[0];
+var attractions = [];
+for(i = 1; i < val.length-1; i++)
+{
+attractions.push(val[i]);
+}
+var end = val[val.length-1];
+calcRoute(start, end, attractions);
+});
+          });
+      }
       function updateSavedRoute()
       {
           $.getJSON("/viewroutes", function(data) {
@@ -102,17 +105,31 @@ $.each(data, function(key, val) {
           var routeDisplay = document.getElementById("route_display_panel");
           routeDisplay.innerHTML = "";
           var count = 0;
-          routeDisplay.innerHTML += "<div class=\"row-fluid\">"
+          routeDisplay.innerHTML += "<div class=\"row\">"
           $.each(data, function(key, val) {
               count = count +1;
-              var line = "";
-              $.each(val, function(key1, val1) {
-              line += key1 + ': ' + val1 + " </br> ";
-              });
+              var line = "<h4>" + key + " </h4>";
+              for(var i = 0; i < val.length; i++)
+              {
+                  if(i == 0 || i == val.length-1){
+                      line += "<h4>" + val[i] + " </h4> ";
+                  }
+                  else{
+                      line += "<p>" + val[i] + " </p> ";
+                  }
+              }
 
-              routeDisplay.innerHTML += "<div class=\"span3\">\n<h2> Route"+count+"</h2>\n <p>" + line +"</p>\n<p><a class=\"btn\" href=\"#\">View details &raquo;</a></p>\n</div><!--/span-->\n";
+/*
+              $.each(val, function(key1, val1) {
+              line += "<h4>" + val1 + " </h4> ";
+              });*/
+
+              routeDisplay.innerHTML += "<div class=\"well span3\">\n <p>" + line +"</p>\n<p> <a class=\"btn btn-small btn-success\" href=\"#\" onClick=\"showSavedRoute("+key+")\">View</a></p>\n</div><!--/span-->\n";
+
+       
+
               if(count%3 == 0){
-                  routeDisplay.innerHTML += "</div> <div class=\"row-fluid\">";
+                  routeDisplay.innerHTML += "</div> <div class=\"row\">";
               }
           });
           routeDisplay.innerHTML += "</div>"

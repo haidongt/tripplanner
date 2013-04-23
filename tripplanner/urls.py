@@ -19,4 +19,11 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^admin/lookups/', include(ajax_select_urls)),
+
+	url(r'^saveroute/(?P<route>.*)/$', 'tripDB.views.saveRoute'),
+	url(r'^viewroutes/', 'tripDB.views.viewRoutes'),
+	url(r'^existingroutes/', 'tripDB.views.existingRoutes'),
+	url(r'^getrouteforid/(?P<r_id>[0-9]*)/$', 'tripDB.views.getRouteForId'),
+
+
 )
