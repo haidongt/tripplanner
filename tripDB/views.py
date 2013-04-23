@@ -34,6 +34,9 @@ def register(request):
     if request.POST:
         username = request.POST.get('username')
         password = request.POST.get('password')
+        print username
+        print password
+        print 'aaaaaaaaaaaa'
         try:
             user = User.objects.create_user(username, 'lennon@thebeatles.com', password)
             user.save()
