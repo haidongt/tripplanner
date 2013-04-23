@@ -24,8 +24,13 @@ def index(request):
 
 
 def existingRoutes(request):
+    dd = {}
     if request.method == "GET":
-        return render_to_response('planner/routesview.html')
+        if request.user.is_authenticated():
+            dd["authenticated"] = 1
+        else:
+            dd["authenticated"] = 0
+        return render_to_response('planner/routesview.html', dd)
 
 # Create your views here.
 
@@ -57,23 +62,29 @@ def getRouteForId(request, r_id):
     route = Route.objects.get(id=r_id)
     attractions = route.attraction_set.all()
     tmp = [route.destA]
-    for attraction in attractions:
-        tmp.append(attraction.name)
+    for i in range(len(attractions)):
+        tmp.append(attractions[len(attractions)-i-1].name)
     tmp.append(route.destB)
     to_json = {"data":tmp}
+    return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
+
+def deleteRouteForId(request, r_id):
+    route1 = Route.objects.get(id=r_id)
+    route1.delete()
+    to_json = {}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 
 def viewRoutes(request):
     to_json = {}
     routes = Route.objects.all()
     i = 0
-    print "view routes"
+    print "view routes" + str(len(routes))
     for route in routes:
         i = i+1;
         attractions = route.attraction_set.all()
         tmp = [route.destA]
-        for attraction in attractions:
-            tmp.append(attraction.name)
+        for i in range(len(attractions)):
+	        tmp.append(attractions[len(attractions)-i-1].name)
         tmp.append(route.destB)
         to_json[route.id] = tmp
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')

@@ -68,7 +68,7 @@ if(authenticated)
 
      <div class="content">
         <div class="page-header">
-          <h1>Plan your new route <small>and attractions to visit along the way!</small></h1>
+          <h1>Plan your new route <small>with attractions to visit along the way!</small></h1>
         </div>
 
 <table width = "100%" cellpadding = "10">
@@ -118,13 +118,12 @@ if(authenticated)
     <br>
 -->
     <form name="form" action="post" method="">
-      Attractions: 
-      <input type="button" value="add" onClick="add();">
+      <input type="button" value="Add another attraction" class="btn" onClick="add();">
     <div id="my_div"></div>
     </form>
     
-      <input type="submit" value="Calculate" onclick="calcRoute();">
-      <input id="save_button" type="submit" value="Save" onclick="saveRoute();" disabled>
+      <input type="submit" value="Calculate" class="btn" onclick="calcRoute();">
+      <input id="save_button" type="submit" value="Save" class="btn" onclick="saveRoute();" disabled>
 </td>
 </tr>
 </table>

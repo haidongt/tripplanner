@@ -27,6 +27,7 @@ urlpatterns = patterns('',
 	url(r'^viewroutes/', 'tripDB.views.viewRoutes'),
 	url(r'^existingroutes/', 'tripDB.views.existingRoutes'),
 	url(r'^getrouteforid/(?P<r_id>[0-9]*)/$', 'tripDB.views.getRouteForId'),
+	url(r'^deleterouteforid/(?P<r_id>[0-9]*)/$', 'tripDB.views.deleteRouteForId'),
 
 
 )

@@ -15,7 +15,12 @@
     <script src="/static/bootstrapjs/bootstrap.min.js"></script>
    
   </head>
+{% if not authenticated %}
+<body onload="initializeMapOnly()">
+{% else %}
   <body onload="initialize()">
+{% endif %}
+
     <div class="navbar navbar-inverse topbar">
       <div class="navbar-inner">
         <div class="container">
@@ -31,6 +36,14 @@
               <li class="active"><a href="#">View existing trips</a></li>
             </ul>
           </div><!--/.nav-collapse -->
+              <form class="navbar-form pull-right">
+	       {% if not authenticated %}
+              <a href="/login" class="btn">Sign in</a>
+	      {% else %}
+	       <a href="/logout" class="btn">Log out</a>
+	       {% endif %}
+            </form>
+
         </div>
       </div>
     </div>
@@ -39,7 +52,7 @@
 
      <div class="content">
         <div class="page-header">
-          <h1>Plan your new route <small>and attractions to visit along the way!</small></h1>
+          <h1>Planned routes</h1>
         </div>
 
 <table width = "100%" cellpadding = "10">
@@ -48,41 +61,19 @@
 
           <div class="span8">
                  <div id="map-canvas" style="width:100%; height:400px"></div>
-             <!--
-             <div class="figure">
-                <p><b>Playframework: </b> Connecting with 344 people.</p>
-             </div>
-             <div>
-                 <table><tr>
-                 <td width="300px"><b>Map Icon Legend</b><br />What type of developers are around you?</td>
-                 <td width="75px"><img src="/public/images/type0.png" alt='User icon'><br/>User</td>
-                 <td width="75px"><img src="/public/images/type1.png" alt='Creator icon'><br /> Committer</td>
-                 <td width="75px"><img src="/public/images/type2.png" alt='Author icon'><br /> Author</td>
-                 <td width="75px"><img src="/public/images/type3.png" alt='Blogger icon'><br /> Blogger</td>
-                 </tr></table>
-             </div>
-             -->
           </div>
 </td>
 
 <td width = "50%" valign = "top">
 
-<div style="margin:20px;border-width:2px;">
-    <form action = "">
-    <b>Start:</b>
-    <input type = "text" id="start"><br>
-    <b>End:</b>
-    <input type = "text" id="end"><br>
-    </form>
+<div class = "well" id = "current_display_route">
+{% if not authenticated %}
+<h4><small>Please log in to view your routes.</small></h4>
+{% else %}
+<h4><small>Click on a specific route to view detail.</small></h4>
+{% endif %}
 
-    <form name="form" action="post" method="">
-      Attractions: 
-      <input type="button" value="add" onClick="add();">
-    <div id="my_div"></div>
-    </form>
-    
-      <input type="submit" value="Calculate" onclick="calcRoute();">
-      <input id="save_button" type="submit" value="Save" onclick="saveRoute();" disabled>
+ </div>  
 </td>
 </tr>
 </table>

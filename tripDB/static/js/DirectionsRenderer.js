@@ -90,6 +90,9 @@ updateSavedRoute();
 $.each(data, function(key, val) {
 
   });
+          var save_button = document.getElementById("save_button");
+save_button.className = "btn btn-info";
+save_button.disabled = true;
           }
           ); 
       }

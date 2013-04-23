@@ -25,6 +25,17 @@ var currentRoute;
         directionsDisplay.setMap(map);
         updateSavedRoute();
       }
+      function initializeMapOnly() {
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+        var mapOptions = {
+          zoom: 6,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          center: chicago
+        }
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        directionsDisplay.setMap(map);
+      }
 
       function calcRoute(start, end, attractions)
  {
@@ -94,7 +105,31 @@ attractions.push(val[i]);
 }
 var end = val[val.length-1];
 calcRoute(start, end, attractions);
-});
+
+
+var currentDisplay = document.getElementById("current_display_route");
+
+currentDisplay.innerHTML = "";
+
+line = "<h4>" + start + " </h4> ";
+line += "<ul>";
+for(i = 0; i < attractions.length; i++)
+{
+line += "<li><p>" + attractions[i] + "</p> ";
+}
+line += "</ul>";
+line += "<h4>" + end + " </h4> ";
+currentDisplay.innerHTML += line;
+
+          });
+          });
+
+      }
+
+      function deleteRoute(id)
+      {
+          $.getJSON("/deleterouteforid/"+id, function(data) {
+                        updateSavedRoute();
           });
       }
       function updateSavedRoute()
@@ -108,14 +143,17 @@ calcRoute(start, end, attractions);
           routeDisplay.innerHTML += "<div class=\"row\">"
           $.each(data, function(key, val) {
               count = count +1;
-              var line = "<h4>" + key + " </h4>";
+              var line = "";
               for(var i = 0; i < val.length; i++)
               {
-                  if(i == 0 || i == val.length-1){
-                      line += "<h4>" + val[i] + " </h4> ";
+                  if(i == 0){
+                      line += "<h4>" + val[i] + " </h4><ul>";
+                  }
+                  else if(i == val.length-1){
+                      line += "</ul><h4>" + val[i] + " </h4> ";
                   }
                   else{
-                      line += "<p>" + val[i] + " </p> ";
+                      line += "<li><p>" + val[i] + " </p> ";
                   }
               }
 
@@ -124,7 +162,7 @@ calcRoute(start, end, attractions);
               line += "<h4>" + val1 + " </h4> ";
               });*/
 
-              routeDisplay.innerHTML += "<div class=\"well span3\">\n <p>" + line +"</p>\n<p> <a class=\"btn btn-small btn-success\" href=\"#\" onClick=\"showSavedRoute("+key+")\">View</a></p>\n</div><!--/span-->\n";
+              routeDisplay.innerHTML += "<div class=\"well span3\">\n <p>" + line +"</p>\n<p>           <a class=\"btn btn-small btn-info\" href=\"#\" onClick=\"showSavedRoute("+key+")\">View</a>         <a class=\"btn btn-small btn-danger\" onClick=\"deleteRoute("+key+")\">Delete</a></p>\n</div><!--/span-->\n";
 
        
 
