@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-<!--
-<a href="/login">login</a> | <a
-    href="register/">register</a>
--->
-
-
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Trip Planner</title>
@@ -16,24 +9,10 @@
         <link rel="stylesheet" media="screen" href="/static/css/main.css">
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD92Ym1qY92sMoaJWC_BiFrE8A_QAU9QMI&sensor=false"></script>
-    <script src="/static/js/DirectionsRenderer.js"></script>
+    <script src="/static/js/RoutesViewRenderer.js"></script>
     
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="/static/bootstrapjs/bootstrap.min.js"></script>
-    <script>
-var authenticated = {{authenticated}}
-/*
-if(authenticated)
-{
-  var loginlink = document.getElementById("loginLink");
-  loginlink.innerHTML = "logout";
-  loginlink.href = "/logout";
-  var registerlink = document.getElementById("registerLink");
-  registerlink.innerHTML = "";
-
-}
-*/
-    </script>
    
   </head>
   <body onload="initialize()">
@@ -48,18 +27,10 @@ if(authenticated)
           <a class="brand" href="#">Trip Planner</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Plan new trip</a></li>
-              <li><a href="/existingroutes">View existing trips</a></li>
+              <li ><a href="/">Plan new trip</a></li>
+              <li class="active"><a href="#">View existing trips</a></li>
             </ul>
           </div><!--/.nav-collapse -->
-              <form class="navbar-form pull-right">
-	       {% if not authenticated %}
-              <a href="/login" class="btn">Sign in</a>
-	      {% else %}
-	       <a href="/logout" class="btn">Log out</a>
-
-	       {% endif %}
-            </form>
         </div>
       </div>
     </div>
@@ -76,7 +47,7 @@ if(authenticated)
 <td width = "50%" valign = "top">
 
           <div class="span8">
-                 <div id="map-canvas" style="width:100%; height:450px"></div>
+                 <div id="map-canvas" style="width:100%; height:400px"></div>
              <!--
              <div class="figure">
                 <p><b>Playframework: </b> Connecting with 344 people.</p>
@@ -103,20 +74,7 @@ if(authenticated)
     <b>End:</b>
     <input type = "text" id="end"><br>
     </form>
-<!--
-    <b>Waypoints:</b> <br>
-    <i>(Ctrl-Click for multiple selection)</i> <br>
-    <select multiple id="waypoints">
-      <option value="montreal, quebec">Montreal, QBC</input>
-      <option value="toronto, ont">Toronto, ONT</input>
-      <option value="chicago, il">Chicago</input>
-      <option value="winnipeg, mb">Winnipeg</input>
-      <option value="fargo, nd">Fargo</input>
-      <option value="calgary, ab">Calgary</input>
-      <option value="spokane, wa">Spokane</input>
-    </select>
-    <br>
--->
+
     <form name="form" action="post" method="">
       Attractions: 
       <input type="button" value="add" onClick="add();">
@@ -128,9 +86,12 @@ if(authenticated)
 </td>
 </tr>
 </table>
-     </div>
-     </div>
 
+<div id="route_display_panel" class="span13">
+
+
+     </div>
+   </div>
 
   </body>
 </html>
