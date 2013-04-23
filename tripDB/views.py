@@ -27,9 +27,10 @@ def index(request):
 def register(request):
 
     dd = {}
+    dd.update(csrf(request))
 
     if request.method == 'GET':
-        return render_to_response('registration/registration.html')
+        return render_to_response('registration/registration.html', dd)
 
     if request.POST:
         username = request.POST.get('username')
