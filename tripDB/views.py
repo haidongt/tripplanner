@@ -10,6 +10,8 @@ from django.utils import simplejson
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.shortcuts import redirect
+from django.contrib.auth.models import User
+
 
 
 def index(request):
@@ -49,12 +51,13 @@ def saveRoute(request, route):
     start = route[0]
     end = route[-1]
     attractions = route[1:-1]
-    newRoute = Route(destA = start, destB = end)
+    row = User.objects.filter(username = request.user)
+    print "another time saved"
+    newRoute = Route(destA = start, destB = end, user_id = row[0])
     newRoute.save()
     for attraction in attractions:
         newAttraction = Attraction(route = newRoute, name = attraction)
         newAttraction.save()
-
     to_json = {}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 
@@ -76,7 +79,10 @@ def deleteRouteForId(request, r_id):
 
 def viewRoutes(request):
     to_json = {}
-    routes = Route.objects.all()
+    userRow = User.objects.filter(username = request.user)
+    print "row[0].id" + str(id)
+    routes = Route.objects.filter(user_id=userRow[0].id)
+    print "seleted routes size is: " + str(len(routes))
     i = 0
     print "view routes" + str(len(routes))
     for route in routes:

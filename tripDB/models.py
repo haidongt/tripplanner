@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -14,6 +15,7 @@ class Destination(models.Model):
 class Route(models.Model):
     destA = models.CharField(max_length=200)
     destB = models.CharField(max_length=200)
+    user_id = models.ForeignKey(User)
 
 class Attraction(models.Model):
     route = models.ForeignKey(Route)
