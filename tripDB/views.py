@@ -24,6 +24,24 @@ def index(request):
             dd["authenticated"] = 0
         return render_to_response('planner/index.html', dd)
 
+def register(request):
+
+    dd = {}
+
+    if request.method == 'GET':
+        return render_to_response('registration/registration.html')
+
+    if request.POST:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        try:
+            user = User.objects.create_user(username, 'lennon@thebeatles.com', password)
+            user.save()
+        except:
+            dd["register_failed"] = 1
+            
+        dd["registered"] = 1
+        return render_to_response('registration/registration.html', dd)
 
 def existingRoutes(request):
     dd = {}

@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^search_form',  view='tripDB.views.search_form',name='search_form'),
     url(r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^logout/$', 'tripDB.views.logout_user'),
+    url(r'^register/', 'tripDB.views.register'),
+
 #    url(r'^login/$', 'tripDB.views.login_user'),
     # url(r'^tripplanner/', include('tripplanner.foo.urls')),
 

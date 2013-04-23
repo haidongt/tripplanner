@@ -20,21 +20,6 @@
     
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="/static/bootstrapjs/bootstrap.min.js"></script>
-    <script>
-var authenticated = {{authenticated}}
-/*
-if(authenticated)
-{
-  var loginlink = document.getElementById("loginLink");
-  loginlink.innerHTML = "logout";
-  loginlink.href = "/logout";
-  var registerlink = document.getElementById("registerLink");
-  registerlink.innerHTML = "";
-
-}
-*/
-    </script>
-   
   </head>
   <body onload="initialize()">
     <div class="navbar navbar-inverse topbar">
@@ -49,15 +34,15 @@ if(authenticated)
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Plan new trip</a></li>
-              <li><a href="/existingroutes">View existing trips</a></li>
+              <li><a href="/existingroutes">Planned trips</a></li>
             </ul>
           </div><!--/.nav-collapse -->
               <form class="navbar-form pull-right">
 	       {% if not authenticated %}
-              <a href="/login" class="btn">Sign in</a>
-	      {% else %}
+               <a href="/login" class="btn">Sign in</a>
+               <a href="/register" class="btn">Register</a>
+	       {% else %}
 	       <a href="/logout" class="btn">Log out</a>
-
 	       {% endif %}
             </form>
         </div>
@@ -123,7 +108,13 @@ if(authenticated)
     </form>
     
       <input type="submit" value="Calculate" class="btn" onclick="calcRoute();">
+{% if not authenticated %}
+      <input type="submit" value="Save" class="btn" disabled>
+<h3><small>Please log in to save route.</small></h3>
+{% else %}
       <input id="save_button" type="submit" value="Save" class="btn" onclick="saveRoute();" disabled>
+{% endif %}
+
 </td>
 </tr>
 </table>
