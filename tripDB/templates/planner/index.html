@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+<!--
+<a href="/login">login</a> | <a
+    href="register/">register</a>
+-->
+
+
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Trip Planner</title>
@@ -13,6 +20,20 @@
     
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="/static/bootstrapjs/bootstrap.min.js"></script>
+    <script>
+var authenticated = {{authenticated}}
+/*
+if(authenticated)
+{
+  var loginlink = document.getElementById("loginLink");
+  loginlink.innerHTML = "logout";
+  loginlink.href = "/logout";
+  var registerlink = document.getElementById("registerLink");
+  registerlink.innerHTML = "";
+
+}
+*/
+    </script>
    
   </head>
   <body onload="initialize()">
@@ -32,6 +53,14 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
+              <form class="navbar-form pull-right">
+	       {% if not authenticated %}
+              <a href="/login" class="btn">Sign in</a>
+	      {% else %}
+	       <a href="/logout" class="btn">Log out</a>
+
+	       {% endif %}
+            </form>
         </div>
       </div>
     </div>

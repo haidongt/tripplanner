@@ -110,6 +110,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'tripplanner.urls'
 
+# URL of the login page.
+LOGIN_URL = '/login/'
+
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'tripplanner.wsgi.application'
 
