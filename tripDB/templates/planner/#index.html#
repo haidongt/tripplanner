@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<!--
+<a href="/login">login</a> | <a
+    href="register/">register</a>
+-->
+
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Trip Planner</title>
+    
+        <link rel="stylesheet" media="screen" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="/static/css/main.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD92Ym1qY92sMoaJWC_BiFrE8A_QAU9QMI&sensor=false"></script>
+    <script src="/static/js/DirectionsRenderer.js"></script>
+    
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/static/bootstrapjs/bootstrap.min.js"></script>
+  </head>
+  <body onload="initialize()">
+    <div class="navbar navbar-inverse topbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Trip Planner</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Plan new trip</a></li>
+              <li><a href="/existingroutes">Planned trips</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+              <form class="navbar-form pull-right">
+	       {% if not authenticated %}
+               <a href="/login" class="btn">Sign in</a>
+               <a href="/register" class="btn">Register</a>
+	       {% else %}
+	       <a href="/logout" class="btn">Log out</a>
+	       {% endif %}
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+     <div class="content">
+        <div class="page-header">
+          <h1>Plan your new trip <small>with attractions to visit along the way!</small></h1>
+        </div>
+
+<table width = "100%" cellpadding = "10">
+<tr>
+<td width = "50%" valign = "top">
+
+          <div class="span8">
+                 <div id="map-canvas" style="width:100%; height:450px"></div>
+             <!--
+             <div class="figure">
+                <p><b>Playframework: </b> Connecting with 344 people.</p>
+             </div>
+             <div>
+                 <table><tr>
+                 <td width="300px"><b>Map Icon Legend</b><br />What type of developers are around you?</td>
+                 <td width="75px"><img src="/public/images/type0.png" alt='User icon'><br/>User</td>
+                 <td width="75px"><img src="/public/images/type1.png" alt='Creator icon'><br /> Committer</td>
+                 <td width="75px"><img src="/public/images/type2.png" alt='Author icon'><br /> Author</td>
+                 <td width="75px"><img src="/public/images/type3.png" alt='Blogger icon'><br /> Blogger</td>
+                 </tr></table>
+             </div>
+             -->
+          </div>
+</td>
+
+<td width = "50%" valign = "top">
+
+<div style="margin:20px;border-width:2px;">
+    <form action = "">
+    <b>Start:</b>
+    <input type = "text" id="start"><br>
+    <b>End:</b>
+    <input type = "text" id="end"><br>
+    </form>
+<!--
+    <b>Waypoints:</b> <br>
+    <i>(Ctrl-Click for multiple selection)</i> <br>
+    <select multiple id="waypoints">
+      <option value="montreal, quebec">Montreal, QBC</input>
+      <option value="toronto, ont">Toronto, ONT</input>
+      <option value="chicago, il">Chicago</input>
+      <option value="winnipeg, mb">Winnipeg</input>
+      <option value="fargo, nd">Fargo</input>
+      <option value="calgary, ab">Calgary</input>
+      <option value="spokane, wa">Spokane</input>
+    </select>
+    <br>
+-->
+    <form name="form" action="post" method="">
+      <input type="button" value="Add another attraction" class="btn" onClick="add();">
+    <div id="my_div"></div>
+    </form>
+    
+      <input type="submit" value="Calculate" class="btn" onclick="calcRoute();">
+{% if not authenticated %}
+      <input type="submit" value="Save" class="btn" disabled>
+<h3><small>Please log in to save route.</small></h3>
+{% else %}
+      <input id="save_button" type="submit" value="Save" class="btn" onclick="saveRoute();" disabled>
+{% endif %}
+
+</td>
+</tr>
+</table>
+     </div>
+     </div>
+
+
+  </body>
+</html>
