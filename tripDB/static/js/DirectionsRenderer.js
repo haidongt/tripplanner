@@ -60,6 +60,7 @@ var currentRoute;
             document.getElementById('save_button').disabled = false;
             var route = response.routes[0];
             currentRoute = route;
+            getRecommendation();
             var summaryPanel = document.getElementById('directions_panel');
             summaryPanel.innerHTML = '';
             // For each route, display summary information.
@@ -74,6 +75,28 @@ var currentRoute;
         });
       }
 
+      function getRecommendation()
+      {
+
+          var attractions = '';
+          for (var i = 1; i < currentRoute.legs.length; i++) {
+              attractions += currentRoute.legs[i].start_address;
+              if (i != currentRoute.legs.length - 1)
+              {
+                  attractions += "__";
+              }
+          }
+          $.getJSON(
+          "/recommendfor/" + attractions,
+          function (data) {
+$.each(data, function(key, val) {
+        var tag = document.getElementById('recommendation');
+tag.innerHTML = "You might also be interested in visiting " + val + ".";
+
+});
+         
+          }); 
+      }
       function saveRoute() {
 updateSavedRoute();
           var route = '';

@@ -86,6 +86,14 @@ def saveRoute(request, route):
     to_json = {}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 
+
+def recommendFor(request, attractions):
+    attractions =  attractions.split("__")
+    recommendation = "Champaign"
+    to_json = {"recommendation":recommendation}
+    return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
+
+
 def getRouteForId(request, r_id):
     route = Route.objects.get(id=r_id)
     attractions = route.attraction_set.order_by("order")
