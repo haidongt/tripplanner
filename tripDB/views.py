@@ -75,10 +75,8 @@ def saveRoute(request, route):
     end = route[-1]
     attractions = route[1:-1]
     row = User.objects.filter(username = request.user)
-    print "another time saved"
     newRoute = Route(destA = start, destB = end, user = row[0])
     newRoute.save()
-    print newRoute.save().query
     a_order = 0
     for attraction in attractions:
         a_order = a_order + 1
