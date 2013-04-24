@@ -119,6 +119,49 @@ def recommendFor(request, attractions):
     to_json = {"recommendation":recommendations}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 
+def shortestRoute(start, end, attractions, dist_dict):
+	end1 = [start]
+	end2 = [end]
+	while len(attractions) != 0:
+	    shortest = 1000000
+	    endtype = 0;
+	    selected_attraction = None
+	    for attraction in attractions:
+                dist1 = dist_dict[(end1, attraction)]
+                dist2 = dist_dict[(end2, attraction)]
+                if dist1 < shortest:
+                    endtype = 1
+                    selected_attraction = attraction
+                    shortest = dist1
+                if dist2 < shortest:
+                    endtype = 2
+                    selected_attraction = attraction
+                    shortest = dist1
+		
+		if endtype == 1:
+                    end1.append(selected_attraction)
+		else:
+                    end2.append(selected_attraction)
+		attractions.remove(selected_attraction)
+	
+	for i in range(0, len(end2)):
+            end1.append(ends[-i-1])
+	end1 = adjustRoute(end1, dist_dict)
+	return end1
+
+def adjustRoute(route, dist_dict):
+	
+    for i in range(0,len(route)):
+        if i > 0 and i < len(route) -4:
+            a1 = route[i]
+            a2 = route[i+1]
+            a3 = route[i+2]
+            a4 = route[i+3]
+            if dist_dict[(a1, a2)] + dist_dict[(a3, a4)] > dist_dict[(a1, a3)] + dist_dict[(a2, a4)]:
+                route[i+2] = a2
+                route[i+1] = a3
+    return route
+	
 def getRouteForId(request, r_id):
     route = Route.objects.get(id=r_id)
     attractions = route.attraction_set.order_by("order")
