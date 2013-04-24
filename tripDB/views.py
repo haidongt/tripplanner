@@ -78,6 +78,7 @@ def saveRoute(request, route):
     print "another time saved"
     newRoute = Route(destA = start, destB = end, user = row[0])
     newRoute.save()
+    print newRoute.save().query
     a_order = 0
     for attraction in attractions:
         a_order = a_order + 1
@@ -112,8 +113,8 @@ def deleteRouteForId(request, r_id):
 
 def viewRoutes(request):
     to_json = {}
-    userRow = User.objects.filter(username = request.user)
-    routes = Route.objects.filter(user=userRow[0].id)
+    #userRow = User.objects.filter(username = request.user)
+    routes = Route.objects.filter(user__username = request.user)
     i = 0
     for route in routes:
         i = i+1;
