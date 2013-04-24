@@ -1,0 +1,160 @@
+Montgomery Zoo*Montgomery Zoo, 2301 Coliseum Parkway, Montgomery, AL 36110, USA*32.4189820*-86.27488699999999
+ Alaska SeaLife Center*Alaska SeaLife Center, 301 Railway Avenue, Seward, AK 99664, USA*60.09996680*-149.44075440
+Phoenix Zoo*The Phoenix Zoo, North Galvin Parkway, Phoenix, AZ 85008, USA*33.45254520*-111.94966890
+Heritage Park Zoo*Zoo Freeway, Milwaukee, WI, USA*43.13096059999999*-88.05526739999999
+Reid Park Zoo*Lee H. Brown Family Conservation Learning Center, Tucson, AZ 85716, USA*32.20808970*-110.92146840
+Little Rock Zoo*Little Rock Zoo, Zoo Dr, Little Rock, AR 72205, USA*34.74733210*-92.33086940
+Charles Paddock Zoo*Charles Paddock Zoo, 9100 Morro Road, Atascadero, California 93422, USA*35.46692510*-120.67053210
+Big Bear Alpine Zoo*Big Bear Alpine Zoo, San Bernardino National Forest, 43285 Goldmine Drive, Big Bear Lake, CA 92315, USA*34.22922940*-116.8585890
+Sequoia Park Zoo*Sequoia Park Zoo, 3414 W Street, Eureka, CA 95503, USA*40.77705250*-124.1445990
+Fresno Chaffee Zoo*Fresno Chaffee Zoo, 894 West Belmont Avenue, Fresno, CA 93728, USA*36.7529220*-119.8221940
+Micke Grove Zoo*Micke Grove Zoo, 11793 N Micke Grove Rd, Lodi, CA 95240, USA*38.0790520*-121.2722680
+Los Angeles Zoo*Los Angeles Zoo and Botanical Gardens, 5333 Zoo Drive, Los Angeles, CA 90027, USA*34.14887410*-118.28397570
+Oakland Zoo*Oakland Zoo, 9777 Golf Links Road, Oakland, CA 94605, USA*37.75147720*-122.14763880
+Living Desert*The Living Desert, 47900 Portola Avenue, Palm Desert, CA 92260, USA*33.70124820*-116.37286380
+Exotic Feline Breeding Compound *Exotic Feline Breeding Compound, 3718 60th Street West, Rosamond, CA 93560, USA*34.8740460*-118.2370150
+Sacramento Zoo*Sacramento Zoo, 3930 West Land Park Drive, Sacramento, CA 95822, USA*38.53930890*-121.50237470
+Aquarium of the Bay*Aquarium of the Bay, Embarcadero Drive, San Francisco, CA 94133, USA*37.80852050000001*-122.40927650
+San Francisco Zoological Gardens*San Francisco Zoo, 1 Zoo Road, San Francisco, CA 94132, USA*37.73212660*-122.50405940
+Happy Hollow Zoo*Happy Hollow Park & Zoo, 1300 Senter Road, San Jose, CA 95112, USA*37.3240720*-121.86382880
+CuriOdyssey*CuriOdyssey, 1651 Coyote Point Drive, San Mateo, CA 94401, USA*37.59053460*-122.319650
+Cabrillo Marine Aquarium*Cabrillo Marine Aquarium, 3720 Stephen M White Drive, Los Angeles, CA 90731, USA*33.71131950*-118.28555170
+Santa Ana Zoo*Santa Ana Zoo, 1801 East Chestnut Avenue, Santa Ana, CA 92701, USA*33.74229250*-117.84371990
+Santa Barbara Zoo*Santa Barbara Zoo, 500 Ninos Drive, Santa Barbara, CA 93103, USA*34.42040750*-119.66635440
+Pueblo Zoo*Pueblo Zoo, 3455 Nuckolls Avenue, Pueblo, CO 81005, USA*38.2615020*-104.6554080
+Connecticut's Beardsley Zoo*Connecticut's Beardsley Zoo, 1875 Noble Avenue, Bridgeport, CT 06610, USA*41.20756080*-73.18396530
+Brandywine Zoo*Brandywine Zoo, 1001 North Park Drive, Wilmington, DE 19802, USA*39.7552480*-75.5492680
+Smithsonian National Zoological Park*Smithsonian National Zoological Park, Panda Gift Shop, 3001 Connecticut Avenue Northwest, Washington, DC 20008, USA*38.93005420*-77.05507790
+Jacksonville Zoological Gardens*Jacksonville Zoo and Gardens, 370 Jacksonville Zoo Train, Jacksonville, FL 32218, USA*30.40267030*-81.64323530
+Brevard Zoo*Brevard Zoo, 8225 North Wickham Road, Melbourne, FL 32940, USA*28.2257860*-80.7148090
+Zoo Miami*Zoo Miami, 12400 Southwest 152nd Street, Miami, FL 33177, USA*25.6133360*-80.3984370
+Central Florida Zoo & Botanical Gardens*Central Florida Zoo & Botanical Gardens, 3755 U.S. 17, Stanford, FL 32771, USA*28.83066050*-81.3164410
+Mote Marine Aquarium*Mote Marine Laboratory, 1600 Ken Thompson Parkway, Sarasota, FL 34236, USA*27.33256120*-82.57771480
+Tampa's Lowry Park Zoo*Tampa's Lowry Park Zoo, 1101 West Sligh Avenue, Tampa, FL 33604, USA*28.01097060*-82.46891529999999
+The Florida Aquarium*The Florida Aquarium, 701 Channelside Drive, Tampa, Florida 33602, USA*27.94422780*-82.44517689999999
+Palm Beach Zoo*Palm Beach Zoo, 1301 Summit Boulevard, West Palm Beach, FL 33405, USA*26.66632850*-80.06880339999999
+Chehaw Wild Animal Park*Parks at Chehaw, 105 Chehaw Park Rd, Albany, GA 31701, USA*31.61746370*-84.13795420
+Zoo Atlanta*Zoo Atlanta, 800 Cherokee Avenue Southeast, Atlanta, GA 30315, USA*33.7324490*-84.37087009999999
+Waikiki Aquarium*Waikiki Aquarium, 2777 Kalakaua Avenue, Honolulu, HI 96815, USA*21.2657480*-157.8215270
+Zoo Boise*Zoo Boise, 355 Julia Davis Drive, Boise, ID 83702, USA*43.60793150*-116.2031870
+Tautphaus Park Zoo*Tautphaus Park Zoo, Rogers Street, Idaho Falls, ID 83402, USA*43.47227620*-112.04215280
+Pocatello Zoo *Pocatello Zoo, 2900 South 2nd Avenue, Pocatello, ID 83204, USA*42.84235530*-112.42226230
+Miller Park Zoo*Miller Park Zoo, 1020 South Morris Avenue, Bloomington, IL 61701, USA*40.46949630*-89.00516330000001
+Lincoln Park Zoo*Lincoln Park Zoo, 2001 North Clark Street, Chicago, IL 60614, USA*41.92089030*-87.63291719999999
+Niabi Zoo*Niabi Zoo, Coal Valley, IL 61240, USA*41.44442120*-90.43317470
+Scovill Zoo*Scovill Zoo, 71 South Country Club Road, Decatur, IL 62521, USA*39.82867770*-88.90688419999999
+Peoria Zoo*Peoria Zoo, 2218 North Prospect Road, Peoria, IL 61603, USA*40.71697480*-89.57393089999999
+Henson Robinson Zoo*Henson Robinson Zoo, 1100 East Lake Shore Drive, Springfield, IL 62712, USA*39.72747980*-89.58277020
+Cosley Zoo*Cosley Zoo, 1356 North Gary Avenue, Wheaton, IL 60187, USA*41.87842720*-88.12024839999999
+Mesker Park Zoo & Botanic Garden*Mesker Park Zoo, 1545 Mesker Park Drive, Evansville, IN 47720, USA*37.996340*-87.6060210
+Fort Wayne Children's Zoo*Fort Wayne Zoo Railroad, Fort Wayne, IN 46808, USA*41.10823370*-85.15344569999999
+Columbian Park Zoo*Columbian Park Zoo, 1915 Scott Street, Lafayette, IN 47904, USA*40.41223240*-86.87061960
+Washington Park Zoo*Woodland Park Zoo, North 59th Street, Seattle, WA 98103, USA*47.6691370*-122.3539850
+Potawatomi Zoo*Potawatomi Zoo, 500 South Greenlawn Avenue, South Bend, IN 46615, USA*41.66793320*-86.22020370
+Blank Park Zoo*Blank Park Zoo, 7401 Southwest 9th Street, Des Moines, Iowa 50315, USA*41.52072820*-93.62553310
+National Mississippi River Museum & Aquarium*National Mississippi River Museum & Aquarium, 350 East 3rd Street, Dubuque, IA 52001, USA*42.4964930*-90.6611070
+David Traylor Zoo of Emporia *David Traylor Zoo of Emporia, Kansas 66801, USA*38.38583180*-96.17762350
+Lee Richardson Zoo*Lee Ricardson Zoo, 312 Finnup Drive, Garden City, KS 67846, USA*37.95937110*-100.87267650
+Hutchinson Zoo*Hutchinson Zoo railroad, Hutchinson, KS 67501, USA*38.03152590*-97.92138960
+Sunset Zoological Park*Sunset Zoo, 2333 Oak Street, Manhattan, KS 66502, USA*39.17696970*-96.59569119999999
+Topeka Zoological Park*Topeka, KS, USA*39.05582350*-95.68901849999999
+Sedgwick County Zoo*Sedgwick County Zoo, 5555 W Zoo Blvd, Wichita, KS 67212, USA*37.71524450*-97.40974729999999
+Louisville Zoological Garden*Louisville, KY, USA*38.25266470*-85.75845570
+Alexandria Zoo*Alexandria Zoo, Passage in Antonyades Palace, Ezbet Saad, Qism Sidi Gabir, Al Iskandariyah, Egypt*31.20351570*29.94658920
+BREC's Baton Rouge Zoo*BREC's Baton Rouge Zoo, 3601 Thomas Road, Baton Rouge, LA 70811, USA*30.55896430*-91.15768709999999
+The Maryland Zoo in Baltimore*The Maryland Zoo in Baltimore, Baltimore, MD 21217, USA*39.32455650*-76.64412059999999
+Salisbury Zoo*Salisbury Zoological Park, 755 South Park Drive, Salisbury, MD 21802, USA*38.36072310*-75.58261440
+Catoctin Wildlife Preserve & Zoo*Catoctin Wildlife Preserve and Zoo and Store, 13019 Catoctin Furnace Road, Thurmont, MD 21788, USA*39.59154190*-77.4312180
+Capron Park Zoo*Capron Park Zoo, 201 County Street, Attleboro, MA 02703, USA*41.93699489999999*-71.29892040
+Franklin Park Zoo*Happy Hollow Park & Zoo, 1300 Senter Road, San Jose, CA 95112, USA*37.3240720*-121.86382880
+Museum of Science*Museum of Science, 1 1 Science Park, Boston, MA 02114, USA*42.36712140*-71.07021329999999
+Buttonwood Park Zoo*Buttonwood Park Zoo, 425 Hawthorn Street, New Bedford, MA 02740, USA*41.6302010*-70.9531650
+Stone Zoo*Stone Zoo, 149 Pond Street, Stoneham, MA 02180, USA*42.46247920*-71.09361640
+Binder Park Zoo*Binder Park Zoo, 7400 Division Drive, Battle Creek, MI 49014, USA*42.24557360*-85.15364520
+Detroit Zoological Society*Detroit, MI, USA*42.3314270*-83.04575380
+John Ball Zoological Garden*John Ball Zoo, 1300 West Fulton Street, Grand Rapids, MI 49504, USA*42.96235580*-85.70209939999999
+Potter Park Zoological Gardens*Potter Park Zoo, 1301 South Pennsylvania Avenue, Lansing, MI 48912, USA*42.71872159999999*-84.53795420
+The Children's Zoo at Celebration Square*Children's Zoo at Celebration Square, 1730 South Washington Avenue, Saginaw, MI 48601, USA*43.4118060*-83.95196299999999
+Minnesota Zoo*Minnesota Zoo, 13000 Zoo Boulevard, Apple Valley, MN 55124, USA*44.76907440*-93.1932540
+Lake Superior Zoological Gardens*Lake Superior Zoo, 72nd Ave W, Duluth, MN 55802, USA*46.72602830*-92.18998499999999
+Pine Grove Zoo*Pine Grove, Cape Town 7560, South Africa*-33.86851990*18.708970
+Como Park Zoo *Como Town, 1255 Kaufman Drive, Saint Paul, MN 55103, USA*44.98084910*-93.15408490
+Jackson Zoological Park*Jackson Zoo, 2918 West Capitol Street, Jackson, MS 39209, USA*32.31920590*-90.22359290
+Kansas City Zoological Gardens*Kansas City Zoo, 6800 Zoo Drive, Kansas City, MO 64132, USA*39.00638280*-94.52829129999999
+Saint Louis Zoo*Saint Louis Zoo, Government Drive, St. Louis, MO 63110, USA*38.63664510*-90.2925140
+Dickerson Park Zoo*Dickerson Park Zoo, 1401 West Norton Road, Springfield, MO 65803, USA*37.25353290*-93.30635119999999
+Lincoln Children's Zoo*Lincoln Children's Zoo, 1222 South 27th Street, Lincoln, NE 68502, USA*40.80022980*-96.68226319999999
+Omaha's Henry Doorly Zoo*Omaha's Henry Doorly Zoo & Aquarium, 3701 South 10th Street, Omaha, NE 68107, USA*41.22515190*-95.92644179999999
+Riverside Zoo*Zoo / Riverside, Los Angeles, CA 90027, USA*34.1546750*-118.2936550
+Squam Lakes Natural Science Center*Squam Lakes Natural Science Center, 23 Science Center Road, Holderness, NH 03245, USA*43.73480610*-71.59076310
+Cape May County Park Zoo *Cape May County Zoo, 707 Route 9 South, Cape May Court House, NJ 08210, USA*39.10304080*-74.8136470
+Bergen County Zoo*Bergen County Zoo, 216 Forest Avenue, River Edge, NJ 07652, USA*40.93408030*-74.04727059999999
+Turtle Back Zoo*Turtle Back Zoo, 560 Northfield Avenue, West Orange, NJ 07052, USA*40.76811420*-74.27991919999999
+Alameda Park Zoo*Alameda Park Zoo, Alamogordo, NM 88310, USA*32.90197310*-105.9610830
+Albuquerque Biological Park*ABQ BioPark Zoo, 903 10th Street Southwest, Albuquerque, NM, USA*35.07801120*-106.66263370
+Living Desert Zoo & Gardens State Park*Living Desert Zoo & Gardens State Park, 1504 Miehls Drive, Carlsbad, New Mexico 88220, USA*32.44190610*-104.27803160
+Binghamton Zoo at Ross Park*Binghamton, NY, USA*42.09868669999999*-75.91797380000001
+Buffalo Zoo*Buffalo Zoological Gardens, 300 Parkside Avenue, Buffalo, NY 14214, USA*42.93845920*-78.85171210
+Trevor Zoo*Trevor Zoo, 131 Millbrook School Road, Millbrook, NY 12545, USA*41.84625339999999*-73.61837389999999
+Aquarium of Niagara*Aquarium of Niagara, 701 Whirlpool Street, Niagara Falls, NY 14301, USA*43.094340*-79.06023499999999
+Staten Island Zoo*Staten Island Zoo, 614 Broadway, Staten Island, NY 10310, USA*40.62538410*-74.11466249999999
+Rosamond Gifford Zoo at Burnet Park*Rosamond Gifford Zoo at Burnet Park, 1 Conservation Place, Syracuse, NY 13204, USA*43.04503380*-76.17683479999999
+Utica Zoo*The Utica Zoo, 99 Steele Hill Road, Utica, NY 13501, USA*43.08143850*-75.24532210
+NY State Living Museum*Living Torah Museum, 1601 41st Street, Brooklyn, NY 11218, USA*40.63554460*-73.98051230
+North Carolina Zoological Park*North Carolina Zoo, 4401 Zoo Parkway, Asheboro, NC 27205, USA*35.62083920*-79.75509099999999
+North Carolina Aquarium at Pine Knoll Shores*North Carolina Aquarium at Pine Knoll Shores, 1 Roosevelt Boulevard, Pine Knoll Shores, NC 28512, USA*34.6990720*-76.8293020
+Natural Science Center of Greensboro/Greensboro Science Center*Greensboro Science Center, 4301 Lawndale Drive, Greensboro, NC 27455, USA*36.12974579999999*-79.83359870
+North Carolina Aquarium at Fort Fisher*North Carolina Aquarium At Fort Fisher, 900 Loggerhead Road, Kure Beach, NC 28449, USA*33.96261850*-77.92615409999999
+North Carolina Aquarium on Roanoke Island*Roanoke Island, Nags Head, NC, USA*35.88974270*-75.66153840000001
+Dakota Zoo*Dakota Zoo, 602 Riverside Park Road, Bismarck, ND 58504, USA*46.79931650*-100.80786650
+Red River Zoo*Red River Zoo, 4255 23rd Avenue South, Fargo, ND 58104, USA*46.84492050*-96.85452959999999
+Roosevelt Park Zoo*Roosevelt Park Zoo, East Burdick Expressway, Minot, ND 58701, USA*48.23309330*-101.27510520
+Chahinkapa Zoo*Chahinkapa Park Zoo, 1004 R J Hughes Drive, Wahpeton, ND 58075, USA*46.27462680*-96.59816979999999
+Akron Zoological Park*Akron, OH, USA*41.08144470*-81.51900529999999
+Cincinnati Zoo and Botanical Garden*Cincinnati Zoo, 3400 Vine Street, Cincinnati, OH 45220, USA*39.1423610*-84.50888350
+Columbus Zoo and Aquarium*Columbus Zoo and Aquarium, 4850 Powell Road, Powell, OH 43065, USA*40.15619770*-83.11833559999999
+The Wilds*The Wilds, Pretoria, South Africa*-25.81670530*28.33304490
+Boonshoft Museum of Discovery*Boonshoft Museum Of Discovery, 2600 Deweese Parkway, Dayton, OH 45414, USA*39.78862110*-84.20201899999999
+African Safari Wildlife Park*African Safari Wildlife Park, 267 South Lightner Road, Port Clinton, OH 43452, USA*41.51815730000001*-82.8513770
+The Toledo Zoo*Toledo Zoo, 2 Hippo Way, Toledo, OH 43609, USA*41.61889980*-83.58024220
+Oklahoma City Zoological Park*Oklahoma City Zoo, 2101 NE 50th St, Oklahoma City, Oklahoma 73111, USA*35.52399250*-97.47368680
+Tulsa Zoo and Living Museum*Tulsa Zoo and Living Museum, 6421 East 36th Street North, Tulsa, OK 74115, USA*36.21102060*-95.90795510
+Oregon Zoo*Oregon Zoo, 4001 Southwest Canyon Road, Portland, OR 97221, USA*45.51004180*-122.71590150
+Wildlife Safari*Wildlife Safari, 1790 Safari Rd, Winston, OR 97471, USA*43.14095280*-123.42744830
+Erie Zoological Society*Buffalo Zoological Gardens, Buffalo, NY 14214, USA*42.93845920*-78.85171210
+ZOOAMERICA North American Wildlife Park*Zoo America North American, 201 Park Avenue, Hershey, PA 17033, USA*40.28673960*-76.65011530
+Elmwood Park*Elmwood Park, IL, USA*41.92114230*-87.80922660
+Philadelphia Zoo*Philadelphia Zoo, 3400 West Girard Avenue, Philadelphia, PA 19104, USA*39.97305320*-75.19470640
+National Aviary*Aviary Way, Woodbridge, VA 22192, USA*38.6987580*-77.31376999999999
+Pittsburgh Zoo & PPG Aquarium*Pittsburgh Zoo & PPG Aquarium, 1 Wild Place, Pittsburgh, PA 15206, USA*40.48458710*-79.91996979999999
+Lehigh Valley Zoo*Lehigh Valley Zoo, 5150 Game Preserve Road, Schnecksville, PA 18078, USA*40.65914460*-75.62590059999999
+Roger Williams Park Zoo*Roger Williams Park Zoo, 1000 Elmwood Avenue, Providence, RI 02907, USA*41.78660630*-71.41822239999999
+Riverbanks Zoo & Garden*Riverbanks Zoo, 500 Wildlife Parkway, Columbia, SC 29210, USA*34.009320*-81.07370460
+Greenville Zoo*Greenville Zoo, 150 Cleveland Park Drive, Greenville, SC 29601, USA*34.84747810*-82.38587489999999
+Great Plains Zoo & Delbridge Museum*Great Plains Zoo & Delbridge Museum of Natural History, 805 South Kiwanis Avenue, Sioux Falls, SD 57104, USA*43.53898740*-96.76239339999999
+Chattanooga Zoo*Chattanooga Zoo, 301 North Holtzclaw Avenue, Chattanooga, TN 37404, USA*35.0427520*-85.2841830
+Knoxville Zoological Gardens*Knoxville Zoological Gardens, 3500 Knoxville Zoo Drive, Knoxville, TN 37914, USA*35.99980520*-83.88891570000001
+Memphis Zoological Garden & Aquarium*Memphis, TN, USA*35.14953430*-90.04898009999999
+Nashville Zoo, Inc.*Nashville, TN, USA*36.16666670*-86.78333330
+Abilene Zoological Gardens*Zoo Lane, Abilene, TX 79602, USA*32.43704780*-99.69714590
+Gladys Porter Zoo*Gladys Porter Zoo, 500 East Ringgold Street, Brownsville, TX 78520, USA*25.91334420*-97.49543580
+Texas State Aquarium *Texas State Aquarium, 2710 North Shoreline Boulevard, Corpus Christi, TX 78402, USA*27.8139290*-97.3920840
+Dallas Zoo*Dallas Zoo, 650 South R L Thornton Freeway, Dallas, TX 75203, USA*32.74403310*-96.81416899999999
+El Paso Zoo*El Paso Zoo, 4001 East Paisano Drive, El Paso, TX 79905, USA*31.7676360*-106.44526740
+Houston Zoo*Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030, USA*29.71536760*-95.38931320
+Ellen Trout Zoo*Ellen Trout Zoo, Zoo Circle, Lufkin, TX 75904, USA*31.37266070*-94.72753519999999
+San Antonio Zoo*San Antonio Zoo, North Saint Mary's Street, San Antonio, TX 78212, USA*29.46317540*-98.47258599999999
+Caldwell Zoo*Caldwell Zoo, 2203 West Martin Luther King Junior Boulevard, Tyler, TX 75702, USA*32.36824530*-95.32686710
+The Texas Zoo*The Texas Zoo, 110 Memorial Drive, Victoria, TX 77901, USA*28.80926650*-97.01876369999999
+Utah's Hogle Zoo*Utah's Hogle Zoo, East Sunnyside Avenue, Salt Lake City, UT 84108, USA*40.7495420*-111.81437930
+Tracy Aviary*Tracy Aviary, 589 East 1300 South, Salt Lake City, UT 84105, USA*40.742680*-111.8752380
+Willow Park Zoo*Willow Park Zoo, 419 West 700 South, Logan, UT 84323, USA*41.71935980*-111.84808370
+Virginia Zoo*Virginia Zoo in Norfolk, Granby Street, Norfolk, VA 23504, USA*36.878110*-76.2761520
+Mill Mountain Zoo*Mill Mountain Zoo, Roanoke, VA 24014, USA*37.24992880*-79.93354870
+Point Defiance Zoo & Aquarium*Point Defiance Zoo & Aquarium, 5400 N Pearl St, Tacoma, WA 98407, USA*47.3033590*-122.5222130
+Woodland Park Zoo*Woodland Park Zoo, North 59th Street, Seattle, WA 98103, USA*47.6691370*-122.3539850
+Oglebay's Good Zoo*Good Zoo & Benedum Theater, 465 Lodge Drive, Wheeling, WV 26003, USA*40.09705920*-80.66672790
+International Crane Foundation*International Crane Foundation, Fairfield, WI 53913, USA*43.54777989999999*-89.75639910
+Henry Vilas Zoo *Henry Vilas Zoo, 702 South Randall Avenue, Madison, WI 53715, USA*43.06107490*-89.41021739999999
+Milwaukee County Zoological Gardens*Milwaukee County Zoo, West Bluemound Road, Milwaukee, WI 53226, USA*43.03128840*-88.04095529999999
+Racine Zoological Gardens*Racine Zoological Gardens, 2131 North Main Street, Racine, WI 53402, USA*42.749970*-87.7831980

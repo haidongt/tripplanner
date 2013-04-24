@@ -76,20 +76,22 @@ def saveRoute(request, route):
     attractions = route[1:-1]
     row = User.objects.filter(username = request.user)
     print "another time saved"
-    newRoute = Route(destA = start, destB = end, user_id = row[0])
+    newRoute = Route(destA = start, destB = end, user = row[0])
     newRoute.save()
+    a_order = 0
     for attraction in attractions:
-        newAttraction = Attraction(route = newRoute, name = attraction)
+        a_order = a_order + 1
+        newAttraction = Attraction(route = newRoute, name = attraction, order = a_order)
         newAttraction.save()
     to_json = {}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 
 def getRouteForId(request, r_id):
     route = Route.objects.get(id=r_id)
-    attractions = route.attraction_set.all()
+    attractions = route.attraction_set.order_by("order")
     tmp = [route.destA]
     for i in range(len(attractions)):
-        tmp.append(attractions[len(attractions)-i-1].name)
+        tmp.append(attractions[i].name)
     tmp.append(route.destB)
     to_json = {"data":tmp}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
@@ -103,17 +105,14 @@ def deleteRouteForId(request, r_id):
 def viewRoutes(request):
     to_json = {}
     userRow = User.objects.filter(username = request.user)
-    print "row[0].id" + str(id)
-    routes = Route.objects.filter(user_id=userRow[0].id)
-    print "seleted routes size is: " + str(len(routes))
+    routes = Route.objects.filter(user=userRow[0].id)
     i = 0
-    print "view routes" + str(len(routes))
     for route in routes:
         i = i+1;
-        attractions = route.attraction_set.all()
+        attractions = route.attraction_set.order_by("order")
         tmp = [route.destA]
         for i in range(len(attractions)):
-	        tmp.append(attractions[len(attractions)-i-1].name)
+	        tmp.append(attractions[i].name)
         tmp.append(route.destB)
         to_json[route.id] = tmp
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
