@@ -115,7 +115,7 @@ def recommendFor(request, attractions):
                     minDist = distance
                     recommendation = recAttraction.name
         recommendations.append(recommendation)   
-    
+    print recommendations
     to_json = {"recommendation":recommendations}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 

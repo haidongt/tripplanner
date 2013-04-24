@@ -91,7 +91,16 @@ var currentRoute;
           function (data) {
 $.each(data, function(key, val) {
         var tag = document.getElementById('recommendation');
-tag.innerHTML = "You might also be interested in visiting " + val + ".";
+
+tag.innerHTML = "You might also be interested in visiting ";
+
+for( i = val.length-1; i >=0; i--)
+{
+if(i != 0)
+{tag.innerHTML += val[i] + ", ";}
+else
+{tag.innerHTML += val[i] + ".";}
+}
 
 });
          
