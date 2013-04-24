@@ -86,13 +86,39 @@ def saveRoute(request, route):
     to_json = {}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 
-
+'''
 def recommendFor(request, attractions):
     attractions =  attractions.split("__")
     recommendation = "Champaign"
     to_json = {"recommendation":recommendation}
     return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
+'''
 
+def recommendFor(request, attractions):
+    attractions =  attractions.split("__")
+    recommendations = []
+    for attraction in attractions:
+        attraction = attraction.split(",")[0]
+        currLoc = Destination.objects.filter(name=attraction)[0]
+        myTag = currLoc.tag
+        location = currLoc.location.split(",")
+        myLog = float(location[0])
+        myLat = float(location[1])
+        recAttractions = Destination.objects.filter(tag = myTag)
+        minDist = 100000000000000
+         
+        for recAttraction in recAttractions:
+            recLocation = recAttraction.location.split(",")
+            recLog = float(recLocation[0])
+            recLat = float(recLocation[1])
+            distance = (myLog - recLog)*(myLog - recLog) + (myLat - recLat)*(myLat - recLat)
+            if (distance<minDist and recAttraction.name!=attraction):
+                    minDist = distance
+                    recommendation = recAttraction.name
+        recommendations.append(recommendation)   
+    
+    to_json = {"recommendation":recommendations}
+    return HttpResponse(simplejson.dumps(to_json), mimetype='application/json')
 
 def getRouteForId(request, r_id):
     route = Route.objects.get(id=r_id)
